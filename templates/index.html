@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>智慧教室管理系统</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background {
+            position: absolute;
+            background: url('../static/background.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            filter: blur(8px);
+            -webkit-filter: blur(8px);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .rounded-rectangle {
+            position: relative;
+            display: flex;
+            width: 90%;
+            min-width: 1300px;
+            height: 80%;
+            min-height: 800px;
+            border-radius: 25px;
+            background-color: #f2f2f2;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 95%;
+            width: 200px;
+            background-color: #0f337d;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-right: 20px;
+        }
+
+        .menu h1 {
+            text-align: center;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #1a4a94;
+            text-align: center;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+
+        .content {
+            flex-grow: 1;
+            border-radius: 15px;
+            padding: 20px;
+            overflow: hidden;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        .logout {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #1a4a94;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="rounded-rectangle">
+        <div class="menu">
+            <div>
+                <h1>智慧教室</h1>
+                <ul>
+                    <li><a href="index.html"><==智慧物联==></a></li>
+                    <li><a href="2">智慧课堂</a></li>
+                    <li><a href="3">在线学习</a></li>
+                    <li><a href="4">教学分析</a></li>
+                    <li><a href="5">用户</a></li>
+                    <li><a href="">设置</a></li>
+                </ul>
+            </div>
+            <a class="logout" href="/">退出登录</a>
+        </div>
+        <div class="content">
+            <img src="{{ url_for('static', filename='1.jpg') }}" alt="Image">
+        </div>
+    </div>
+</body>
+</html>
